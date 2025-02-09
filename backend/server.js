@@ -11,7 +11,7 @@ const app = express();
 
 // Use CORS middleware to allow requests from your frontend origin
 const corsOptions = {
-    origin: 'http://localhost:5173', // Allow your frontend's origin
+    origin: 'https://apty.onrender.com/', // Allow your frontend's origin
     methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
     credentials: true, // Allow credentials (if needed)
 };
