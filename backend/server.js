@@ -14,7 +14,9 @@ const allowedOrigins = [
     'https://apty.onrender.com/login/student',
     'https://apty.onrender.com/login/admin',
     'https://apty.onrender.com/register/admin',
-    'https://apty.onrender.com/register/student'
+    'https://apty.onrender.com/register/student',
+     'https://apti-project.onrender.com',
+    'https://apty.onrender.com'
 ];
 
 const corsOptions = {
