@@ -38,7 +38,7 @@ function AddQuestion() {
       };
 
       // Send request to backend
-      const response = await axios.post('http://localhost:4500/api/admin/questions', questionPayload);
+      const response = await axios.post('https://apti-project.onrender.com/api/admin/questions', questionPayload);
       console.log('Question added successfully:', response.data);
       alert("Question successfully added");
 
