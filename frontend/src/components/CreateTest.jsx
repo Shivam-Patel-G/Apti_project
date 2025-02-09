@@ -14,7 +14,7 @@ const CreateTest = () => {
 
   useEffect(() => {
     const fetchStudents = async () => {
-      const response = await fetch('http://localhost:4500/api/student/getAllStudents');
+      const response = await fetch('https://apti-project.onrender.com/api/student/getAllStudents');
       const data = await response.json();
       setStudents(data);
     };
@@ -27,7 +27,7 @@ const CreateTest = () => {
     if (difficultyLevel) queryParams.append('difficultyLevel', difficultyLevel);
     if (category) queryParams.append('category', category);
 
-    const response = await fetch(`http://localhost:4500/api/admin/getAllQuestions?${queryParams.toString()}`);
+    const response = await fetch(`https://apti-project.onrender.com/api/admin/getAllQuestions?${queryParams.toString()}`);
     const data = await response.json();
     setQuestions(data);
     setSelectedQuestions([]); // Reset selection on new filter
@@ -60,7 +60,7 @@ const CreateTest = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    const response = await fetch('http://localhost:4500/api/admin/tests', {
+    const response = await fetch('https://apti-project.onrender.com/api/admin/tests', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ testName, questionIds: selectedQuestions, creator: adminId }),
@@ -68,7 +68,7 @@ const CreateTest = () => {
 
     const test = await response.json();
 
-    await fetch('http://localhost:4500/api/admin/tests/assign', {
+    await fetch('https://apti-project.onrender.com/api/admin/tests/assign', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({

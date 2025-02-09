@@ -9,7 +9,7 @@ export default function UpcomingTests() {
 
   useEffect(() => {
     // Fetch upcoming tests for the student
-    axios.get(`http://localhost:4500/api/student/tests/upcoming/${studentId}`)
+    axios.get(`https://apti-project.onrender.com/api/student/tests/upcoming/${studentId}`)
       .then((response) => {
         setTests(response.data);
       })

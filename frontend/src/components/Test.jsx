@@ -54,7 +54,7 @@ const Test = () => {
         // Fetch questions for the specific test from the backend
         const fetchQuestions = async () => {
             try {
-                const response = await axios.get(`http://localhost:4500/api/student/test/${testId}`);
+                const response = await axios.get(`https://apti-project.onrender.com/api/student/test/${testId}`);
                 setQuestions(response.data.questions);
                 setSelectedQuestion(response.data.questions[0]); // Show the first question by default
             } catch (error) {
@@ -77,7 +77,7 @@ const Test = () => {
 
     const handleSubmit = async () => {
         try {
-            const response = await axios.post(`http://localhost:4500/api/student/test/submit`, {
+            const response = await axios.post(`https://apti-project.onrender.com/api/student/test/submit`, {
                 studentId: studentData.id, // Replace with the actual student ID
                 testId,
                 answers: selectedAnswer,

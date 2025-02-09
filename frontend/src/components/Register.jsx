@@ -14,8 +14,8 @@ function Register({ role }) {
   const handleSubmit = async (e) => {
     e.preventDefault();
     const endpoint = role === 'admin' 
-      ? 'http://localhost:4500/api/auth/register/admin' 
-      : 'http://localhost:4500/api/auth/register/student';
+      ? 'https://apti-project.onrender.com/api/auth/register/admin' 
+      : 'https://apti-project.onrender.com/api/auth/register/student';
     
     try {
       const res = await axios.post(endpoint, user);

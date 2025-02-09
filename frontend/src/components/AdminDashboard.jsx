@@ -42,7 +42,7 @@ export default function AdminDashboard() {
 
   const handleTestClick = async (testId) => {
     try {
-      const response = await axios.get(`http://localhost:4500/api/admin/student-responses/test/${testId}`);
+      const response = await axios.get(`https://apti-project.onrender.com/api/admin/student-responses/test/${testId}`);
       setSelectedTestResponses(response.data); // Store all responses for the test
     } catch (error) {
       console.error('Error fetching student responses:', error);
@@ -53,7 +53,7 @@ export default function AdminDashboard() {
     setIsFetchingResults(true); 
     try {
       const userData = JSON.parse(localStorage.getItem('user')); // Retrieve user data
-      const response = await axios.get(`http://localhost:4500/api/admin/student-results/${userData.id}`);
+      const response = await axios.get(`https://apti-project.onrender.com/api/admin/student-results/${userData.id}`);
       setStudentResults(response.data);
     } catch (error) {
       console.error('Error fetching student results:', error);
@@ -66,7 +66,7 @@ export default function AdminDashboard() {
     const fetchTests = async () => {
       try {
         const userData = JSON.parse(localStorage.getItem('user')); // Retrieve user data
-        const response = await axios.get(`http://localhost:4500/api/admin/getTestsOfAdmin?creator=${userData.id}`);
+        const response = await axios.get(`https://apti-project.onrender.com/api/admin/getTestsOfAdmin?creator=${userData.id}`);
         setTests(response.data);
       } catch (error) {
         console.error('Error fetching tests:', error);

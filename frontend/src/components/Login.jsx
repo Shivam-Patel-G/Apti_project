@@ -18,7 +18,7 @@ function Login({ role }) {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const res = await axios.post('http://localhost:4500/api/auth/login', { ...credentials, role });
+      const res = await axios.post('https://apti-project.onrender.com/api/auth/login', { ...credentials, role });
       alert('Login successful!');
       localStorage.setItem('token', res.data.token);
       localStorage.setItem('role', role); 
