@@ -42,7 +42,7 @@ function AddQuestion() {
       console.log('Question added successfully:', response.data);
       alert("Question successfully added");
 
-      window.location.reload();
+    window.location.href = 'https://apty.onrender.com';
       
     } catch (error) {
       console.error('Error adding question:', error.response?.data?.message || error.message);
