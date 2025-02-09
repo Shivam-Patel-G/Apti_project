@@ -1,5 +1,4 @@
-// tailwind.config.js
-module.exports = {
+export default {
   content: [
     './src/**/*.{js,jsx,ts,tsx}', // Adjust this to your project's structure
   ],
@@ -7,6 +6,6 @@ module.exports = {
     extend: {},
   },
   plugins: [
-    require('@tailwindcss/forms'), // Add this line
+    import('@tailwindcss/forms'), // Use import instead of require
   ],
 };
