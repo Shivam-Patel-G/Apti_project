@@ -10,8 +10,8 @@ function AssignTest() {
   useEffect(() => {
     // Fetch tests and students
     const fetchTestsAndStudents = async () => {
-      const testRes = await axios.get('http://localhost:5000/api/admin/tests');
-      const studentRes = await axios.get('http://localhost:5000/api/student');
+      const testRes = await axios.get('https://apti-project.onrender.com/api/admin/tests');
+      const studentRes = await axios.get('https://apti-project.onrender.com/api/student');
       setTests(testRes.data);
       setStudents(studentRes.data);
     };
@@ -19,7 +19,7 @@ function AssignTest() {
   }, []);
 
   const handleAssign = async () => {
-    await axios.post('http://localhost:5000/api/admin/tests/assign', { testId: selectedTest, studentIds: selectedStudents });
+    await axios.post('https://apti-project.onrender.com/api/admin/tests/assign', { testId: selectedTest, studentIds: selectedStudents });
     alert("Test Assigned!")
   };
 
