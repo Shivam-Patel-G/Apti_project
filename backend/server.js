@@ -10,8 +10,21 @@ const authRoutes = require('./routes/authRoute');
 const app = express();
 
 // Use CORS middleware to allow requests from your frontend origin
+const allowedOrigins = [
+    'https://apty.onrender.com/login/student',
+    'https://apty.onrender.com/login/admin',
+    'https://apty.onrender.com/register/admin',
+    'https://apty.onrender.com/register/student'
+];
+
 const corsOptions = {
-    origin: 'https://apty.onrender.com/', // Allow your frontend's origin
+    origin: function (origin, callback) {
+        if (!origin || allowedOrigins.includes(origin)) {
+            callback(null, true);
+        } else {
+            callback(new Error('Not allowed by CORS'));
+        }
+    },
     methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
     credentials: true, // Allow credentials (if needed)
 };
