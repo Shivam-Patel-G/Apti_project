@@ -139,6 +139,9 @@ function Login({ role }) {
               Register
             </NavLink>  
           }
+            <NavLink to='/login/admin' className="font-semibold leading-6 text-indigo-600 hover:text-indigo-500">
+              Login for Admin
+            </NavLink> 
           </p>
         </div>
       </div>
