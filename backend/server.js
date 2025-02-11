@@ -20,7 +20,8 @@ const allowedOrigins = [
     'https://apty.onrender.com/admindashboard',
     'https://apty.onrender.com/studentdashboard',
     'https://apty-project.vercel.app',
-    'http://localhost:5173'
+    'http://localhost:5173',
+    'https://apti-frontend.vercel.app'
 ];
 
 const corsOptions = {
