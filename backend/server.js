@@ -18,7 +18,8 @@ const allowedOrigins = [
      'https://apti-project.onrender.com',
     'https://apty.onrender.com',
     'https://apty.onrender.com/admindashboard',
-    'https://apty.onrender.com/studentdashboard'
+    'https://apty.onrender.com/studentdashboard',
+    'https://apty-project.vercel.app'
 ];
 
 const corsOptions = {
